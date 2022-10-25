@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavLink, useLoaderData } from 'react-router-dom';
+import Courses from '../Courses/Courses';
+import Coursesright from '../Courses/Coursesright ';
 import CoursesDemo from './CoursesDemo/CoursesDemo';
 import "./Home.css"
 
@@ -20,8 +22,17 @@ const Home = () => {
                     courses.map(course => <CoursesDemo
                         key={course.id}
                         course={course}
-                    ></CoursesDemo>)
+                    ></CoursesDemo>
+
+
+                    )
                 }
+
+
+
+
+
+
             </div>
 
             <div className='m-5'>
