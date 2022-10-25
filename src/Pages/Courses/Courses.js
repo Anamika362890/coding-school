@@ -9,14 +9,15 @@ const Courses = () => {
 
     return (
         <Container>
-            <Row>
-                <Col lg='7'>
-                    <CourseLeft></CourseLeft>
-                </Col>
-                <Col lg='5'>
+            <Row >
+
+                <Col lg='2'>
                     <h2>
                         <Coursesright></Coursesright>
                     </h2>
+                </Col>
+                <Col lg='10'>
+                    <CourseLeft></CourseLeft>
                 </Col>
             </Row>
         </Container>

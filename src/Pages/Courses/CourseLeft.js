@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+
 import Card from './Card';
+import './Courses.css'
 
 const CourseLeft = () => {
     const [courses, setCourses] = useState([]);
@@ -13,13 +14,15 @@ const CourseLeft = () => {
     return (
         <div>
             <h1>left nav</h1>
-            {
-                courses.map(course => <Card
-                    key={course.id}
-                    course={course}
-                ></Card>
-                )
-            }
+            <div className='courses-Container'>
+                {
+                    courses.map(course => <Card
+                        key={course.id}
+                        course={course}
+                    ></Card>
+                    )
+                }
+            </div>
         </div>
     );
 };
