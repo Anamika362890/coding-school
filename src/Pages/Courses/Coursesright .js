@@ -20,7 +20,7 @@ const Coursesright = () => {
                 {
                     courses.map(course => <h5 key={course.id}>
 
-                        <Link >{course.name}</Link>
+                        <Link to={`/courses/${course.id}`} >{course.name}</Link>
                     </h5>)
                 }
 
