@@ -37,8 +37,13 @@ const AuthProvider = ({ children }) => {
         return signOut(auth);
     }
 
+    const createUser = (email, password) => {
 
-    const authInfo = { user, providerLogin, logOut };
+        return createUserWithEmailAndPassword(auth, email, password);
+    }
+
+
+    const authInfo = { user, providerLogin, logOut, createUser };
     return (
         <div>
             <AuthContext.Provider value={authInfo}>

@@ -53,6 +53,15 @@ const Header = () => {
                                     user?.uid ?
                                         <>
                                             <span>{user?.displayName}</span>
+
+                                            <NavLink>
+                                                {user?.photoURL ?
+                                                    <Image style={{ height: '30px' }} roundedCircle src={user?.photoURL}></Image>
+                                                    :
+                                                    <FaUser></FaUser>
+
+                                                }
+                                            </NavLink>
                                             <Button onClick={handleLogOut} variant="light" >Log out</Button>
                                         </>
                                         :
@@ -64,14 +73,7 @@ const Header = () => {
                             </NavLink>
 
 
-                            <NavLink>
-                                {user?.photoURL ?
-                                    <Image style={{ height: '30px' }} roundedCircle src={user?.photoURL}></Image>
-                                    :
-                                    <FaUser></FaUser>
 
-                                }
-                            </NavLink>
 
 
                         </div>
