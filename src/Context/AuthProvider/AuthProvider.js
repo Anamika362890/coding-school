@@ -20,6 +20,20 @@ const AuthProvider = ({ children }) => {
         return signInWithPopup(auth, provider);
     }
 
+    const createUser = (email, password) => {
+        return createUserWithEmailAndPassword(auth, email, password);
+    }
+
+    const logIn = (email, password) => {
+        return signInWithEmailAndPassword(auth, email, password);
+    }
+
+
+    const logOut = () => {
+        return signOut(auth);
+    }
+
+
     useEffect(() => {
 
         const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -33,17 +47,11 @@ const AuthProvider = ({ children }) => {
 
     }, [])
 
-    const logOut = () => {
-        return signOut(auth);
-    }
-
-    const createUser = (email, password) => {
-
-        return createUserWithEmailAndPassword(auth, email, password);
-    }
 
 
-    const authInfo = { user, providerLogin, logOut, createUser };
+
+
+    const authInfo = { user, providerLogin, logOut, createUser, logIn };
     return (
         <div>
             <AuthContext.Provider value={authInfo}>
