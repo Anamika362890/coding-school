@@ -13,7 +13,13 @@ import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 
 
 const Header = () => {
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
     return (
         <div className=' p-5'>
             <Navbar className='fixed-top ' bg="light" expand="lg">
@@ -40,10 +46,24 @@ const Header = () => {
 
 
                         <div className='h5'>
-                            <NavLink className='text-decoration-none me-5 ' to='/login'>Log in</NavLink>
-                            <NavLink className='text-decoration-none' to='/registration'>Register</NavLink>
 
-                            <NavLink>{user?.displayName}</NavLink>
+
+                            <NavLink >
+                                {
+                                    user?.uid ?
+                                        <>
+                                            <span>{user?.displayName}</span>
+                                            <Button onClick={handleLogOut} variant="light" >Log out</Button>
+                                        </>
+                                        :
+                                        <>
+                                            <NavLink className='text-decoration-none me-5 ' to='/login'>Log in</NavLink>
+                                            <NavLink className='text-decoration-none' to='/registration'>Register</NavLink>
+                                        </>
+                                }
+                            </NavLink>
+
+
                             <NavLink>
                                 {user?.photoURL ?
                                     <Image style={{ height: '30px' }} roundedCircle src={user?.photoURL}></Image>
