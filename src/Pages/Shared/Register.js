@@ -8,7 +8,7 @@ import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
 
 const Register = () => {
-
+    const navigate = useNavigate();
     const [error, setError] = useState('');
 
     const { createUser } = useContext(AuthContext);
@@ -26,7 +26,7 @@ const Register = () => {
                 console.log(user);
                 form.reset();
                 setError('');
-
+                navigate('/')
             })
             .catch(error => {
                 console.error(error)
