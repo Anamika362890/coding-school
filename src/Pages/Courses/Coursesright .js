@@ -13,7 +13,7 @@ const Coursesright = () => {
     }, [])
 
     return (
-        <div>
+        <div className='position-fixed'>
 
             <h4>All Category {courses.length}</h4>
             <div>

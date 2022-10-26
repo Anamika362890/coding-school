@@ -1,10 +1,11 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 
 const Cards = ({ course }) => {
-    const { name, img, details } = course;
+    const { name, img, details, id } = course;
     return (
         <div>
 
@@ -16,7 +17,11 @@ const Cards = ({ course }) => {
                     <Card.Text>
                         {details.slice(0, 200)}.....
                     </Card.Text>
-                    <Button>See Details</Button>
+
+
+                    <Link to={`/courses/${id}`}>
+                        <Button>See Details</Button>
+                    </Link>
                 </Card.Body>
 
 

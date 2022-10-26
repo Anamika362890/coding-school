@@ -1,10 +1,28 @@
+import { GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
+import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
 const Login = () => {
+
+    const { providerLogin } = useContext(AuthContext);
+
+    const googleProvider = new GoogleAuthProvider()
+
+    const handleGoogleLogin = () => {
+        providerLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+
+            })
+            .catch(error => console.error(error))
+
+    }
     return (
         <div>
             <h1>Welcome Back</h1>
@@ -35,9 +53,9 @@ const Login = () => {
             </Form>
             <div>
                 <h5>Log in with</h5>
-                <FaGoogle>
 
-                </FaGoogle>
+                <Button onClick={handleGoogleLogin}><FaGoogle></FaGoogle></Button>
+
                 <FaGithub></FaGithub>
 
             </div>

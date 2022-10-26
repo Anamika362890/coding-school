@@ -1,19 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Image } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { FaCode, FaMoon, FaSun } from 'react-icons/fa';
+import { FaCode, FaMoon, FaSun, FaUser } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
+import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 
 
 
 const Header = () => {
+    const { user } = useContext(AuthContext);
     return (
-        <div>
-            <Navbar bg="light" expand="lg">
+        <div className=' p-5'>
+            <Navbar className='fixed-top ' bg="light" expand="lg">
                 <Container >
                     <Navbar.Brand href="#" className='d-flex '>
                         <h3 className='me-3'> <FaCode></FaCode></h3>
@@ -39,6 +42,18 @@ const Header = () => {
                         <div className='h5'>
                             <NavLink className='text-decoration-none me-5 ' to='/login'>Log in</NavLink>
                             <NavLink className='text-decoration-none' to='/registration'>Register</NavLink>
+
+                            <NavLink>{user?.displayName}</NavLink>
+                            <NavLink>
+                                {user?.photoURL ?
+                                    <Image style={{ height: '30px' }} roundedCircle src={user?.photoURL}></Image>
+                                    :
+                                    <FaUser></FaUser>
+
+                                }
+                            </NavLink>
+
+
                         </div>
 
 

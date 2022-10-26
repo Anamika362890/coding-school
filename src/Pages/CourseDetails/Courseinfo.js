@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
+import CourseAfterAccess from '../AfterAccessCourse/CourseAfterAccess';
 
 const Courseinfo = ({ course }) => {
 
@@ -12,6 +13,7 @@ const Courseinfo = ({ course }) => {
             <p>{details}</p>
             <Link to={`/course-access/${id}`}>
                 <Button variant="primary">Get Premium Access</Button>
+
             </Link>
 
         </div>

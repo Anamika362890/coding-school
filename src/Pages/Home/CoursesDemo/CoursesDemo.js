@@ -9,9 +9,9 @@ const CoursesDemo = ({ course }) => {
         <div >
 
 
-            <Row >
+            <Row  >
 
-                <Col>
+                <Col  >
                     <Card style={{ width: '330px' }}>
                         <Card.Img className='img' variant="top" src={img} />
                         <Card.Body>
@@ -30,7 +30,7 @@ const CoursesDemo = ({ course }) => {
             </Row>
 
 
-        </div>
+        </div >
 
 
     );
