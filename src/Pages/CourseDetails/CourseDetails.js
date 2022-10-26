@@ -8,6 +8,7 @@ const CourseDetails = () => {
     return (
         <div>
             <h1>Course Details {courses.length}</h1>
+
             {
                 courses.map(course => <Courseinfo
                     key={course.id}

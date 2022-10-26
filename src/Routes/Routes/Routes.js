@@ -8,6 +8,7 @@ import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Shared/Login";
 import Register from "../../Pages/Shared/Register";
 import Route404 from "../../Pages/Shared/Route404";
+import CourseAfterAccess from "../../Pages/AfterAccessCourse/CourseAfterAccess";
 
 
 
@@ -35,13 +36,21 @@ export const routes = createBrowserRouter([
 
 
             },
-
-
             {
-                path: '/faq',
-                element: <FAQ></FAQ>
+                path: '/course-access/:id',
+                element: <CourseAfterAccess></CourseAfterAccess>,
+                loader: ({ params }) => fetch(`http://localhost:5000/course/${params.id}`)
+
 
             },
+
+
+
+            // {
+            //     path: '/faq',
+            //     element: <FAQ></FAQ>
+
+            // },
             {
                 path: '/blog',
                 element: <Blog></Blog>

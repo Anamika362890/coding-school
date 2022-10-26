@@ -1,16 +1,19 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import CourseLeft from './../Courses/CourseLeft';
-import Coursesright from './../Courses/Coursesright ';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const Courseinfo = ({ course }) => {
-    const { name, img, price, details } = course;
+
+    const { name, img, price, details, id } = course;
     return (
         <div>
 
             <h1>{name}</h1>
             <p>{details}</p>
-            <Button>Give Primmer Access</Button>
+            <Link to={`/course-access/${id}`}>
+                <Button variant="primary">Get Premium Access</Button>
+            </Link>
+
         </div>
     );
 };
