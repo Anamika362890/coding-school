@@ -31,7 +31,9 @@ const AuthProvider = ({ children }) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
-
+    const updateUserProfile = (profile) => {
+        return updateProfile(auth.currentUser, profile);
+    }
 
     const logOut = () => {
         setLoading(true);
@@ -60,6 +62,7 @@ const AuthProvider = ({ children }) => {
     const authInfo = {
         user,
         loading,
+        updateUserProfile,
         providerLogin,
         logOut,
         createUser,
