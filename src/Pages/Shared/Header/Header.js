@@ -14,12 +14,12 @@ import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
-    const navigate = useNavigate();
+
 
     const handleLogOut = () => {
         logOut()
             .then(() => {
-                navigate('/login')
+
             })
             .catch(error => console.error(error))
     }
