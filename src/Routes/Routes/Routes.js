@@ -1,13 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../Layout/Main";
-import Blog from "../../Pages/Blog";
+import Blog from "../../Pages/Other/Blog";
 import CourseDetails from "../../Pages/CourseDetails/CourseDetails";
 import Courses from "../../Pages/Courses/Courses";
-import FAQ from "../../Pages/FAQ";
+import FAQ from "../../Pages/Other/FAQ";
 import Home from "../../Pages/Home/Home";
-import Login from "../../Pages/Login";
-import Register from "../../Pages/Register";
-import Route404 from "../../Pages/Route404";
+import Login from "../../Pages/Shared/Login";
+import Register from "../../Pages/Shared/Register";
+import Route404 from "../../Pages/Shared/Route404";
 
 
 
