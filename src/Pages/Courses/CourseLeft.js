@@ -13,7 +13,7 @@ const CourseLeft = () => {
     }, [])
     return (
         <div>
-            <h1 className='title'>Here Our All Courses</h1>
+            <h1 className='title1'>Here Our All Courses</h1>
             <div className='courses-Container'>
                 {
                     courses.map(course => <Card

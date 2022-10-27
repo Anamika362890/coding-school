@@ -12,10 +12,10 @@ const Courses = () => {
 
         <Container>
             <Row  >
-                <Col lg='3' sm='6' md='5' >
+                <Col lg='3' sm='10' md='5' >
                     <Coursesright></Coursesright>
                 </Col>
-                <Col lg='9' sm='6' md='7'>
+                <Col lg='9' sm='2' md='7'>
                     <CourseLeft></CourseLeft>
                 </Col>
             </Row>

@@ -7,7 +7,7 @@ const CourseDetails = () => {
     const courses = useLoaderData();
     return (
         <div>
-            <h1>Course Details {courses.length}</h1>
+
 
             {
                 courses.map(course => <Courseinfo

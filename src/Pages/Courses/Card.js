@@ -10,7 +10,7 @@ const Cards = ({ course }) => {
         <div >
 
 
-            <Card style={{ width: '300px', height: '75vh' }}>
+            <Card className='crd1'>
                 <Card.Img variant="top" src={img} />
                 <Card.Body>
                     <Card.Title>
