@@ -20,6 +20,7 @@ const Header = () => {
         logOut()
             .then(() => {
 
+
             })
             .catch(error => console.error(error))
     }
@@ -57,7 +58,7 @@ const Header = () => {
                                         <>
                                             <span>{user?.displayName}</span>
 
-                                            <NavLink>
+                                            <NavLink data-toggle="tooltip" title={user?.displayName}>
                                                 {user?.photoURL ?
                                                     <Image style={{ height: '30px' }} roundedCircle src={user?.photoURL}></Image>
                                                     :
