@@ -15,8 +15,8 @@ const CoursesDemo = ({ course }) => {
                     <Card style={{ width: '330px' }}>
                         <Card.Img className='img' variant="top" src={img} />
                         <Card.Body>
-                            <Card.Title>  {name}</Card.Title>
-                            <Card.Text>
+                            <Card.Title >  <h3>{name}</h3></Card.Title>
+                            <Card.Text className='d-flex  justify-content-between'>
 
                                 <p> <FaShoppingCart></FaShoppingCart> {price} Tk Only</p>
 

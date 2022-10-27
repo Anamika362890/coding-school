@@ -1,0 +1,30 @@
+.footer {
+    background-image: linear-gradient(#FF3659, #FF647F);
+    height: 35vh;
+
+}
+
+.social a {
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    margin-right: 10px;
+
+}
+
+.social a:hover {
+    color: pink;
+}
+
+
+/* Tab View */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .footer {
+        background-image: linear-gradient(#FF3659, #FF647F);
+        height: 20vh;
+
+    }
+
+
+}

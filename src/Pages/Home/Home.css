@@ -4,3 +4,78 @@
     gap: 30px;
 
 }
+
+.title {
+    margin: 90px;
+    text-align: center;
+    color: #FF3659;
+    backgroud-color: RGB(#FF3659, #FF647F);
+}
+
+.center {
+    text-align: center;
+
+}
+
+.button2 {
+    border: 1px solid white;
+    background-image: linear-gradient(#FF3659, #FF647F);
+    padding: 15px;
+    font-size: 20px;
+    margin-top: 10px;
+    border-radius: 20px;
+    color: whitesmoke;
+    font-weight: bold;
+
+}
+
+.button2:hover {
+    border: 1px solid pink;
+    background-color: whitesmoke;
+    color: pink;
+    font-weight: bold;
+
+}
+
+/* Tab View */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+
+    .courses {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+
+    }
+
+}
+
+/* Mobile View  */
+@media screen and (max-width: 576px) {
+    .courses {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+
+    }
+
+    .title {
+        margin: 0px;
+        margin-bottom: 50px;
+
+    }
+
+    .button2 {
+        border: 1px solid white;
+        background-image: linear-gradient(#FF3659, #FF647F);
+        padding: 15px;
+        font-size: 15px;
+        margin-top: 10px;
+        border-radius: 20px;
+        color: whitesmoke;
+        font-weight: bold;
+
+    }
+
+
+
+}
