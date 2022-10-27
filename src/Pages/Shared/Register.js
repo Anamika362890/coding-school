@@ -1,10 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
+import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import './loginReg.css'
 
 
 const Register = () => {
@@ -55,34 +57,40 @@ const Register = () => {
     }
     return (
         <div>
-            <h1>Create a new account</h1>
-            <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Full Name</Form.Label>
-                    <Form.Control type="name" name='name' placeholder="Enter your name" />
+            <h1 className='title'>Create a new account</h1>
+            <Container>
+                <div className='form'>
+                    <Container>
+                        <Form onSubmit={handleSubmit}>
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>Full Name</Form.Label>
+                                <Form.Control type="name" name='name' placeholder="Enter your name" />
 
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Photo URL</Form.Label>
-                    <Form.Control type="photoUrl" name='photoURL' placeholder="Photo URL" />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>Photo URL</Form.Label>
+                                <Form.Control type="photoUrl" name='photoURL' placeholder="Photo URL" />
 
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" name='email' placeholder="Enter your email" required />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>Email address</Form.Label>
+                                <Form.Control type="email" name='email' placeholder="Enter your email" required />
 
-                </Form.Group>
+                            </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" name='password' placeholder="Enter your password" required />
-                </Form.Group>
-                <p>{error}</p>
+                            <Form.Group className="mb-3" controlId="formBasicPassword">
+                                <Form.Label>Password</Form.Label>
+                                <Form.Control type="password" name='password' placeholder="Enter your password" required />
+                            </Form.Group>
+                            <p className='text-danger'>{error}</p>
 
-                <Button variant="primary" type="submit">
-                    Register
-                </Button>
-            </Form>
+                            <button className='button2' type="submit">
+                                Register
+                            </button>
+                        </Form>
+                    </Container>
+                </div>
+            </Container>
         </div>
     );
 };

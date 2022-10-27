@@ -1,0 +1,42 @@
+.form {
+    background-color: floralwhite;
+    padding: 80px;
+    margin: 60px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.welcome {
+    color: #FF3659;
+    text-align: center;
+}
+
+.nice {
+    text-align: center;
+    color: rgb(220, 210, 210);
+}
+
+.login {
+    color: pink;
+    text-align: center;
+}
+
+.btn-social {
+    padding: 0px 14px 6px 14px;
+    border: 2px solid white;
+
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+/* Mobile View  */
+@media screen and (max-width: 576px) {
+    .form {
+        background-color: floralwhite;
+        padding: 10px;
+        margin: 0px;
+        border: 1px solid white;
+        border-radius: 10px;
+    }
+
+}

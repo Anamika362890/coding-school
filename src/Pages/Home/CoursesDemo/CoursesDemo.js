@@ -12,11 +12,11 @@ const CoursesDemo = ({ course }) => {
             <Row  >
 
                 <Col  >
-                    <Card style={{ width: '330px' }}>
-                        <Card.Img className='img' variant="top" src={img} />
+                    <Card className='c' >
+                        <Card.Img className='img1' variant="top" src={img} />
                         <Card.Body>
                             <Card.Title >  <h3>{name}</h3></Card.Title>
-                            <Card.Text className='d-flex  justify-content-between'>
+                            <Card.Text className='d-lg-flex d-md-flex  justify-content-between '>
 
                                 <p> <FaShoppingCart></FaShoppingCart> {price} Tk Only</p>
 

@@ -1,0 +1,53 @@
+.text {
+    text-align: justify;
+}
+
+.card1 {
+    margin-left: 150px;
+    margin-top: 80px;
+    margin-bottom: 0px;
+    padding: 50px;
+    width: 61rem;
+}
+
+.c {
+    width: 300px;
+
+}
+
+/* Tab View */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .card1 {
+        margin-left: 30px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        padding: 50px;
+        width: 40rem;
+    }
+
+    .c {
+        width: 330px;
+
+    }
+
+}
+
+/* Mobile View  */
+@media screen and (max-width: 576px) {
+    .card1 {
+        margin-left: 0px;
+        margin-top: 80px;
+        margin-bottom: 0px;
+        padding: 0px;
+        width: 21rem;
+    }
+
+    .c {
+        width: 252px;
+        padding-left: 14px;
+
+    }
+
+
+
+}

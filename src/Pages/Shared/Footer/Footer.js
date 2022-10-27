@@ -3,7 +3,7 @@ import { FaFacebook, FaTwitter, FaWhatsapp, FaGithub } from 'react-icons/fa';
 import './Footer.css'
 const Footer = () => {
     return (
-        <div className='footer text-center p-5'>
+        <div className='footer text-center p-5 stick-bottom'>
 
             <h2>You Can Find Us At</h2>
             <ul className='social'>

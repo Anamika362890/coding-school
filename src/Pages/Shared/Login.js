@@ -1,6 +1,7 @@
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useContext } from 'react';
+import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
@@ -72,42 +73,47 @@ const Login = () => {
     }
     return (
         <div>
-            <h1>Welcome Back</h1>
-            <p>Nice to see you again</p>
-            <h3>Log in your account</h3>
+            <h1 className='welcome'>Welcome Back</h1>
+            <p className='nice'>Nice to see you again</p>
+            <h3 className='login'>Log in your account</h3>
 
 
-            <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" name='email' placeholder="Enter your email" required />
+            <Container>
+                <div className='form'>
+                    <Container>
+                        <Form onSubmit={handleSubmit}>
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>Email address</Form.Label>
+                                <Form.Control type="email" name='email' placeholder="Enter your email" required />
 
-                </Form.Group>
+                            </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" name='password' placeholder="Enter your password" required />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
-                <p>{error}</p>
-                <Button variant="primary" type="submit">
-                    Log in
-                </Button>
-                <p>New Here?Create a New account using <Link to='/registration'>Register</Link> </p>
-            </Form>
-            <div>
-                <h5>Log in with</h5>
+                            <Form.Group className="mb-3" controlId="formBasicPassword">
+                                <Form.Label>Password</Form.Label>
+                                <Form.Control type="password" name='password' placeholder="Enter your password" required />
+                            </Form.Group>
 
-                <Button onClick={handleGoogleLogin}><FaGoogle></FaGoogle></Button>
+                            <p className='text-danger'>{error}</p>
+                            <button className='button2' type="submit">
+                                Log in
+                            </button>
+                            <p className='mt-3'>New Here?Create a New account using <Link to='/registration'>Register</Link> </p>
+                        </Form>
+                        <div className='text-center'>
+                            <h5>Log in with</h5>
 
-
-                <Button onClick={handleGithubLogin}>
-                    <FaGithub></FaGithub></Button>
+                            <button className='me-2 btn-social text-danger' onClick={handleGoogleLogin}><FaGoogle></FaGoogle></button>
 
 
-            </div>
+                            <button className='btn-social' onClick={handleGithubLogin}>
+                                <FaGithub></FaGithub></button>
+
+
+                        </div>
+                    </Container>
+                </div>
+            </Container>
+
         </div>
     );
 };
