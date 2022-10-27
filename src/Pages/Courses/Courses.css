@@ -1,8 +1,38 @@
 .courses-Container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-left: 90px;
 }
 
+.button3 {
+    background-color: #FF3659;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 5px 75px 5px 15px;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+}
+
+.left {
+    background-color: azure;
+    border: 2px solid rgb(244, 240, 240);
+    width: 370px;
+    height: 45vh;
+
+    padding: 30px;
+    position: fixed;
+
+
+
+}
+
+.coursename {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
 
 /* Tab View */
 @media screen and (min-width: 577px) and (max-width: 992px) {

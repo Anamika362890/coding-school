@@ -13,14 +13,14 @@ const Coursesright = () => {
     }, [])
 
     return (
-        <div className='position-fixed'>
+        <div className='left'>
 
-            <h4>All Category {courses.length}</h4>
-            <div>
+            <h4 className='mb-4 login'>Click Here To See Details</h4>
+            <div className='coursename' >
                 {
                     courses.map(course => <h5 key={course.id}>
 
-                        <Link to={`/courses/${course.id}`} >{course.name}</Link>
+                        <Link to={`/courses/${course.id}`} ><button className='button3'>{course.name}</button></Link>
                     </h5>)
                 }
 
