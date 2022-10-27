@@ -58,7 +58,7 @@ const Header = () => {
 
 
 
-                                            <NavLink className='text-decoration-none text-white me-2' data-toggle="tooltip" title={user?.displayName}>
+                                            <NavLink className='text-decoration-none text-white m-3' data-toggle="tooltip" title={user?.displayName}>
                                                 {user?.photoURL ?
                                                     <Image style={{ height: '50px' }} roundedCircle src={user?.photoURL}></Image>
                                                     :
