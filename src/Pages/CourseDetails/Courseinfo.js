@@ -5,6 +5,7 @@ import CourseAfterAccess from '../AfterAccessCourse/CourseAfterAccess';
 import ReactDOM from "react-dom";
 import Pdf from "react-to-pdf";
 import './CourseInfo.css'
+import { FaDownload } from 'react-icons/fa';
 
 
 
@@ -26,7 +27,7 @@ const Courseinfo = ({ course }) => {
                         </div>
                         <div className='mb-2 mx-4' >
                             <Pdf targetRef={ref} filename="course.pdf">
-                                {({ toPdf }) => <button className='button2' onClick={toPdf}>Download Pdf</button>}
+                                {({ toPdf }) => <button className='button2' onClick={toPdf}>Download Pdf <FaDownload></FaDownload> </button>}
                             </Pdf>
 
 

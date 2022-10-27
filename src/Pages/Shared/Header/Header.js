@@ -26,7 +26,7 @@ const Header = () => {
             .catch(error => console.error(error))
     }
 
-    const [show, setShow] = useState(true);
+    const [show, setShow] = useState(false);
 
 
     return (
