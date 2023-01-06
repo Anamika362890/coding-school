@@ -3,6 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import CourseLeft from './CourseLeft';
 import Coursesright from './Coursesright ';
 import './Courses.css'
+import Banner from '../Home/Banner';
 
 
 const Courses = () => {
@@ -19,6 +20,7 @@ const Courses = () => {
                     <CourseLeft></CourseLeft>
                 </Col>
             </Row>
+
         </Container>
 
 

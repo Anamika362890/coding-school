@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Banner from '../Home/Banner';
 
 import Card from './Card';
 import './Courses.css'
@@ -13,6 +14,7 @@ const CourseLeft = () => {
     }, [])
     return (
         <div>
+
             <h1 className='title1'>Here Our All Courses</h1>
             <div className='courses-Container'>
                 {

@@ -9,6 +9,7 @@ import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 import './Header.css';
 import '../.././darkmoon.css'
 import '../../../App.css'
+import Banner from '../../Home/Banner';
 
 
 
@@ -30,7 +31,7 @@ const Header = () => {
 
 
     return (
-        <div className=' p-5 mb-5'>
+        <div className=' px-5 '>
 
             <Navbar className='fixed-top nav ' expand="lg">
                 <Container >
@@ -115,7 +116,10 @@ const Header = () => {
 
                     </Navbar.Collapse>
                 </Container>
+
+
             </Navbar>
+
 
         </div >
     );

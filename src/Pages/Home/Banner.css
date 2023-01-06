@@ -1,0 +1,15 @@
+.active img {
+    height: 700px;
+    width: 400px;
+}
+
+.service {
+    border: 1px solid gainsboro;
+    padding: 7px;
+}
+
+.service img {
+    width: 290px;
+    height: 150px;
+    margin-bottom: 10px;
+}

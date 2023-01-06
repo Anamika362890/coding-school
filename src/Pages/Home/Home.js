@@ -3,8 +3,10 @@ import { FaArrowRight } from 'react-icons/fa';
 import { NavLink, useLoaderData } from 'react-router-dom';
 import Courses from '../Courses/Courses';
 import Coursesright from '../Courses/Coursesright ';
+import Banner from './Banner';
 import CoursesDemo from './CoursesDemo/CoursesDemo';
 import "./Home.css"
+import Services from './Services';
 
 
 const Home = () => {
@@ -15,6 +17,7 @@ const Home = () => {
 
     return (
         <div className='App'>
+            <Banner></Banner>
             <h1 className='title'>Here is Our Popular {courses.length} Courses</h1>
 
             <div className='courses container' >
@@ -43,7 +46,7 @@ const Home = () => {
             </div>
 
 
-
+            <Services></Services>
         </div>
     );
 };
