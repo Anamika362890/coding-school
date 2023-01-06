@@ -6,6 +6,7 @@ import Coursesright from '../Courses/Coursesright ';
 import Banner from './Banner';
 import CoursesDemo from './CoursesDemo/CoursesDemo';
 import "./Home.css"
+import Ready from './Ready';
 import Services from './Services';
 import Successfull from './Successfull';
 
@@ -46,8 +47,9 @@ const Home = () => {
                 </button></NavLink>
             </div>
 
-
+            <Ready></Ready>
             <Services></Services>
+
             {/* <Successfull></Successfull> */}
         </div>
     );
