@@ -7,6 +7,7 @@ import Banner from './Banner';
 import CoursesDemo from './CoursesDemo/CoursesDemo';
 import "./Home.css"
 import Services from './Services';
+import Successfull from './Successfull';
 
 
 const Home = () => {
@@ -47,6 +48,7 @@ const Home = () => {
 
 
             <Services></Services>
+            {/* <Successfull></Successfull> */}
         </div>
     );
 };
