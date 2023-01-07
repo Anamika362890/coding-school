@@ -50,7 +50,7 @@ const Home = () => {
             <Ready></Ready>
             <Services></Services>
 
-            {/* <Successfull></Successfull> */}
+            <Successfull></Successfull>
         </div>
     );
 };
