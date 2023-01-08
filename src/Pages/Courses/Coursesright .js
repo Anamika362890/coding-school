@@ -15,7 +15,7 @@ const Coursesright = () => {
     return (
         <div className='left'>
 
-            <h4 className='mb-4 login'>Click Here To See Details</h4>
+            <h4 className='mt-5  pt-5 login'>Click Here To See Details</h4>
             <div className='coursename' >
                 {
                     courses.map(course => <h5 key={course.id}>

@@ -54,6 +54,29 @@
         margin-left: 250px;
     }
 
+
+    .ser {
+        margin-bottom: 20px;
+
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        border-radius: 15px;
+
+        border: 1px solid #c97d8a;
+
+        box-shadow: 0px 5px 10px #FFC0CB;
+    }
+
+    .ser img {
+        width: 40px;
+        height: 50px;
+        margin-right: 3px;
+
+
+
+    }
+
 }
 
 /* Mobile View  */
@@ -66,4 +89,18 @@
 
 
     }
+
+    .ser {
+        margin-bottom: 20px;
+
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        border-radius: 15px;
+
+        border: 1px solid #c97d8a;
+
+        box-shadow: 0px 5px 10px #FFC0CB;
+    }
+
 }
